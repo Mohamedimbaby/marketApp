@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/slide1" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            app:tabBackground="@color/whiteSelected"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            app:tabGravity="center"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteSelected" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.michaldrabik.tapbarmenulib.TapBarMenu
+        android:id="@+id/tapBarMenu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        app:tbm_buttonPosition="center">
+
+        <TextView
+            android:id="@+id/item1"
+            android:textColor="@color/whiteSelected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="sort"
+
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+        <Space
+            android:layout_width="56dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/item2"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="filter"
+            android:textColor="@color/whiteSelected" />
+
+    </com.michaldrabik.tapbarmenulib.TapBarMenu>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
